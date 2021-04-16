@@ -27,7 +27,7 @@ class LogProcessor:
             LogEntity(
                 datetime=make_aware(datetime.strptime(kwargs.pop('datetime'), DATETIME_LOG_FORMAT)),
                 response_code=int(kwargs.pop('response_code')),
-                response_size=(lambda x: int(x) if isinstance(x, int) else 0)(kwargs.pop('response_size')),
+                response_size=(lambda x: int(x) if x.isdigit() else 0)(kwargs.pop('response_size')),
                 **kwargs
             ) for kwargs in self._parse_from_file()
         ]
