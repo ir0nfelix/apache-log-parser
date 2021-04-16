@@ -9,7 +9,8 @@ from infrastructure.constants import (
     LOG_FILE_PATH,
     LOG_URL,
     CHUNK_SIZE, LOG_COMPILE,
-    DATETIME_LOG_FORMAT, DATE_AND_HM_FORMAT
+    DATETIME_LOG_FORMAT,
+    DATE_AND_HM_FORMAT
 )
 from logs.models import LogEntity
 
